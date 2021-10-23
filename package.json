@@ -1,0 +1,19 @@
+{
+  "name": "tomatophile",
+  "version": "1.0.0",
+  "description": "tomatophile website",
+  "main": "app.js",
+  "scripts": {
+    "test": "cock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steviegt6/Tomatophile.git"
+  },
+  "author": "Steviegt6 and TheStachelfisch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steviegt6/Tomatophile/issues"
+  },
+  "homepage": "https://github.com/Steviegt6/Tomatophile#readme"
+}
