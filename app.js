@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 
 const port = process.env.port || 8080;
+const hostname = process.env.hostname || "localhost";
 
 app.use(express.static("static", {extensions: ["html"]}));
 
@@ -19,4 +20,4 @@ app.use(function (err, req, res, next) {
 });
 
 console.log(`Trying to bind on port ${port}...`);
-app.listen(port, console.log(`Now listening on port ${port}. http://localhost:${port}`));
+app.listen(port, hostname, console.log(`Now listening on port ${port}. http://${hostname}:${port}`));
