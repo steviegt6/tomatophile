@@ -5,20 +5,21 @@ h4,
 h5,
 h6,
 p,
-img {
-    animation: fadeIn 6s;
-    -webkit-animation: fadeIn 6s;
-    -moz-animation: fadeIn 6s;
-    -o-animation: fadeIn 6s;
-    -ms-animation: fadeIn 6s;
+img,
+.fadable {
+    animation: fadeIn 6s forwards;
+    -webkit-animation: fadeIn 6s forwards;
+    -moz-animation: fadeIn 6s forwards;
+    -o-animation: fadeIn 6s forwards;
+    -ms-animation: fadeIn 6s forwards;
 }
 
 #pfp {
-    animation: fadeIn 6s, imgRounding 3s;
-    -webkit-animation: fadeIn 6s, imgRounding 3s;
-    -moz-animation: fadeIn 6s, imgRounding 3s;
-    -o-animation: fadeIn 6s, imgRounding 3s;
-    -ms-animation: fadeIn 6s, imgRounding 3s;
+    animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
+    -webkit-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
+    -moz-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
+    -o-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
+    -ms-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -75,7 +76,7 @@ img {
     }
 }
   
-  @-moz-keyframes imgRounding {
+@-moz-keyframes imgRounding {
     0% {
         border-radius: 8px;
     }
@@ -84,7 +85,7 @@ img {
     }
 }
   
-  @-webkit-keyframes imgRounding {
+@-webkit-keyframes imgRounding {
     0% {
         border-radius: 8px;
     }
@@ -93,7 +94,7 @@ img {
     }
 }
   
-  @-o-keyframes imgRounding {
+@-o-keyframes imgRounding {
     0% {
         border-radius: 8px;
     }
@@ -102,11 +103,56 @@ img {
     }
   }
   
-  @-ms-keyframes imgRounding {
+@-ms-keyframes imgRounding {
     0% {
         border-radius: 8px;
     }
     100% {
         border-radius: 64px;
+    }
+}
+
+@keyframes discordRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+@-moz-keyframes discordRotation {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+  
+@-webkit-keyframes discordRotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+  
+@-o-keyframes discordRotation {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+  
+@-ms-keyframes discordRotation {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
     }
 }
