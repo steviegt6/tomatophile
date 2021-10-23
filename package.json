@@ -4,7 +4,8 @@
   "description": "tomatophile website",
   "main": "app.js",
   "scripts": {
-    "test": "cock"
+    "test": "cock",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Steviegt6/Tomatophile/issues"
   },
-  "homepage": "https://github.com/Steviegt6/Tomatophile#readme"
+  "homepage": "https://github.com/Steviegt6/Tomatophile#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
 }
