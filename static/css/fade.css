@@ -4,55 +4,109 @@ h3,
 h4,
 h5,
 h6,
-p {
-  animation: fadeIn 6s;
-  -webkit-animation: fadeIn 6s;
-  -moz-animation: fadeIn 6s;
-  -o-animation: fadeIn 6s;
-  -ms-animation: fadeIn 6s;
+p,
+img {
+    animation: fadeIn 6s;
+    -webkit-animation: fadeIn 6s;
+    -moz-animation: fadeIn 6s;
+    -o-animation: fadeIn 6s;
+    -ms-animation: fadeIn 6s;
+}
+
+#pfp {
+    animation: fadeIn 6s, imgRounding 3s;
+    -webkit-animation: fadeIn 6s, imgRounding 3s;
+    -moz-animation: fadeIn 6s, imgRounding 3s;
+    -o-animation: fadeIn 6s, imgRounding 3s;
+    -ms-animation: fadeIn 6s, imgRounding 3s;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes imgRounding {
+    0% {
+        border-radius: 8px;
+    }
+    100% {
+        border-radius: 64px;
+    }
+}
+  
+  @-moz-keyframes imgRounding {
+    0% {
+        border-radius: 8px;
+    }
+    100% {
+        border-radius: 64px;
+    }
+}
+  
+  @-webkit-keyframes imgRounding {
+    0% {
+        border-radius: 8px;
+    }
+    100% {
+        border-radius: 64px;
+    }
+}
+  
+  @-o-keyframes imgRounding {
+    0% {
+        border-radius: 8px;
+    }
+    100% {
+        border-radius: 64px;
+    }
   }
-  100% {
-    opacity: 1;
-  }
+  
+  @-ms-keyframes imgRounding {
+    0% {
+        border-radius: 8px;
+    }
+    100% {
+        border-radius: 64px;
+    }
 }
