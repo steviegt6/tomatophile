@@ -4,7 +4,7 @@
   "description": "tomatophile website",
   "main": "app.js",
   "scripts": {
-    "test": "cock",
+    "test": "mocha --recursive",
     "start": "node app.js"
   },
   "repository": {
