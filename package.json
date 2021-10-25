@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Steviegt6/Tomatophile#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "tsparticles": "^1.36.0"

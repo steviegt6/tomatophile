@@ -5,21 +5,12 @@ h4,
 h5,
 h6,
 p,
-img,
 .fadable {
     animation: fadeIn 6s forwards;
     -webkit-animation: fadeIn 6s forwards;
     -moz-animation: fadeIn 6s forwards;
     -o-animation: fadeIn 6s forwards;
     -ms-animation: fadeIn 6s forwards;
-}
-
-#pfp {
-    animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
-    -webkit-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
-    -moz-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
-    -o-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
-    -ms-animation: fadeIn 6s, imgRounding 3s, discordRotation 3s ease-in-out;
 }
 
 @keyframes fadeIn {
