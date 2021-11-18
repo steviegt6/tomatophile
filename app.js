@@ -25,7 +25,7 @@ app.use(favicon(faviconIco));
 
 // Route was not found, render 404 error page
 app.use(function (req, res) {
-    console.log("received 404 request: " + req.path, ", from ip: " + req.ip);
+    console.log("received 404 request: " + req.path);
     res.status(404).sendFile(__dirname + "/static/404.html");
 });
 
