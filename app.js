@@ -10,7 +10,7 @@ const defaultPort = 8080;
 const defaultHostname = "localhost";
 const port = process.env.port || 8080;
 const hostname = process.env.hostname || "localhost";
-const faviconIco = __dirname + "/static/assets/favicon.ico";
+//const faviconIco = __dirname + "/static/assets/favicon.ico";
 
 console.log("resolved port: " + port + ", default: " + defaultPort);
 console.log("resolved hostname: " + hostname + ", default: " + defaultHostname);
@@ -20,8 +20,8 @@ const extensions = ["html"];
 console.log("serving favicon at location: " + faviconIco);
 app.use(favicon(faviconIco));
 
-console.log("using express status with extensions: " + extensions);
-app.use(express.static("static", {extensions: extensions}));
+//console.log("using express status with extensions: " + extensions);
+//app.use(express.static("static", {extensions: extensions}));
 
 // Route was not found, render 404 error page
 app.use(function (req, res) {
