@@ -20,7 +20,7 @@ const extensions = ["html"];
 console.log("using express status with extensions: " + extensions);
 app.use(express.static("static", {extensions: extensions}));
 
-console.log("services favicon at location: " + faviconIco);
+console.log("serving favicon at location: " + faviconIco);
 app.use(favicon(faviconIco));
 
 // Route was not found, render 404 error page
