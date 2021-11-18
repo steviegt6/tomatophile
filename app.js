@@ -10,7 +10,7 @@ const defaultPort = 8080;
 const defaultHostname = "localhost";
 const port = process.env.port || 8080;
 const hostname = process.env.hostname || "localhost";
-const faviconIco = __dirname + "statis/assets/favicon.ico";
+const faviconIco = __dirname + "/static/assets/favicon.ico";
 
 console.log("resolved port: " + port + ", default: " + defaultPort);
 console.log("resolved hostname: " + hostname + ", default: " + defaultHostname);
