@@ -4,11 +4,13 @@ require("dotenv").config();
 
 const express = require("express");
 const app = express();
+const favicon = require("serve-favicon");
 
 const defaultPort = 8080;
 const defaultHostname = "localhost";
 const port = process.env.port || 8080;
 const hostname = process.env.hostname || "localhost";
+const faviconIco = __dirname + "statis/assets/favicon.ico";
 
 console.log("resolved port: " + port + ", default: " + defaultPort);
 console.log("resolved hostname: " + hostname + ", default: " + defaultHostname);
@@ -16,8 +18,10 @@ console.log("resolved hostname: " + hostname + ", default: " + defaultHostname);
 const extensions = ["html"];
 
 console.log("using express status with extensions: " + extensions);
-
 app.use(express.static("static", {extensions: extensions}));
+
+console.log("services favicon at location: " + faviconIco);
+app.use(favicon(faviconIco));
 
 // Route was not found, render 404 error page
 app.use(function (req, res) {
