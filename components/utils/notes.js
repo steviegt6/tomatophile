@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const notesDir = join(process.cwd(), "submodules", "notes", "Documentation");
+const notesDir = join(process.cwd(), "submodules", "notes", "documentation");
 
 export function getAllNoteIds() {
   const fileNames = fs.readdirSync(notesDir);
