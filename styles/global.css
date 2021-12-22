@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  color: white;
+  background-color: #010101;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  color: lightblue;
+}
+
+a:before,
+a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.025em;
+  right: 0;
+  left: 0;
+  height: 0.05em;
+}
+
+a:before {
+  width: 100%;
+  transition: width 0.3s;
+  background-color: currentColor;
+  background: #00000000;
+}
+
+a:after {
+  width: 0;
+  transition: width 0.3s;
+  background: lightblue;
+}
+
+a:hover {
+  text-decoration: none;
+  transition: width 0.3s;
+  background: linear-gradient(270deg, #add8e6, #add8e6, #67cff1, #add8e6, #add8e6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  -webkit-animation: bg-grad-anim 3s ease infinite;
+  -moz-animation: bg-grad-anim 3s ease infinite;
+  -o-animation: bg-grad-anim 3s ease infinite;
+  animation: bg-grad-anim 3s ease infinite;
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 15px;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+@-webkit-keyframes bg-grad-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes bg-grad-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-o-keyframes bg-grad-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bg-grad-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

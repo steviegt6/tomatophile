@@ -1,11 +1,9 @@
 {
-  "name": "tomatophile",
-  "version": "1.0.0",
-  "description": "tomatophile website",
-  "main": "app.js",
+  "private": true,
   "scripts": {
-    "test": "mocha --recursive",
-    "start": "node app.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -18,10 +16,20 @@
   },
   "homepage": "https://github.com/Steviegt6/Tomatophile#readme",
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "tsparticles": "^1.36.0",
-    "serve-favicon": "^2.5.0"
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.2",
+    "@types/react": "^17.0.37",
+    "next.js": "^1.0.3",
+    "typescript": "^4.5.4",
+    "typings-for-css-modules-loader": "^1.7.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
