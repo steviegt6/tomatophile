@@ -13,6 +13,7 @@ export default function Home() {
       <header className={styles.header}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
+            suppressHydrationWarning={true}
             src={getRandomFile()}
             className={utilStyles.borderCircle}
             height={100}

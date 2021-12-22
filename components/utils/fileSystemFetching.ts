@@ -1,12 +1,11 @@
-import fs from 'fs';
-
+import fs from "fs";
 /** Data retrieval utilities. **/
 
 export function getFilesFromDirectory(
-    dir: fs.PathLike,
-    map?: (value: string, index: number, array: string[]) => String,
-    sort?: any
-  ):String[] {
+  dir: fs.PathLike,
+  map?: (value: string, index: number, array: string[]) => String,
+  sort?: any
+): String[] {
   const fileNames = fs.readdirSync(dir);
   var mappedFiles: String[];
 

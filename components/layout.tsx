@@ -2,10 +2,17 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import "../components/utils/fileSystemFetching";
+import { startTimer } from "../components/progressBar";
+import { useEffect } from "react";
 
 export const siteTitle = "Tomat";
 
 export default function Layout({ children, home }) {
+  useEffect(() => {
+    console.log('hi');
+    startTimer();
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +25,6 @@ export default function Layout({ children, home }) {
           <span className={utilStyles.progressBar} id={"progress-bar"}></span>
         </div>
         {children}
-        <script type="text/javascript" src="./resources/js/progressBar.js"></script>
       </main>
     </div>
   );

@@ -1,0 +1,3 @@
+[submodule "submodules/notes"]
+	path = submodules/notes
+	url = https://github.com/uranometrical/notes

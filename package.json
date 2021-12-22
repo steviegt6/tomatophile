@@ -16,9 +16,12 @@
   },
   "homepage": "https://github.com/Steviegt6/Tomatophile#readme",
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.2",

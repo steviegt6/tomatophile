@@ -35,7 +35,7 @@ a:before {
   width: 100%;
   transition: width 0.3s;
   background-color: currentColor;
-  background: #00000000;
+  background: transparent;
 }
 
 a:after {
