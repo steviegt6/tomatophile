@@ -47,7 +47,14 @@ a:after {
 a:hover {
   text-decoration: none;
   transition: width 0.3s;
-  background: linear-gradient(270deg, #add8e6, #add8e6, #67cff1, #add8e6, #add8e6);
+  background: linear-gradient(
+    270deg,
+    #add8e6,
+    #add8e6,
+    #67cff1,
+    #add8e6,
+    #add8e6
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

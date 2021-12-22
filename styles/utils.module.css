@@ -58,3 +58,23 @@
 .floatRight {
   float: right;
 }
+
+.fixedTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.progressContainer {
+  width: 100%;
+  background-color: transparent;
+  height: 5px;
+  display: block;
+}
+
+.progressBar {
+  background: linear-gradient(270deg, #67cff1, #add8e6);
+  display: block;
+  height: inherit;
+}
