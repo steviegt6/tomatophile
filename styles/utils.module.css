@@ -74,6 +74,7 @@
 }
 
 .progressBar {
+  width: 0%;
   background: linear-gradient(270deg, #67cff1, #add8e6);
   display: block;
   height: inherit;

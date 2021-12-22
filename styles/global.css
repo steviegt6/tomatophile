@@ -25,7 +25,7 @@ a:after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -0.025em;
+  bottom: -0.01em;
   right: 0;
   left: 0;
   height: 0.05em;
