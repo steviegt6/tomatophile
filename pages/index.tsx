@@ -74,7 +74,7 @@ export default function Home() {
             <li>Tomat.TatsuSharp - A library that wraps around Tatsu's API. <code>(<a href="https://github.com/TomatCord/Tomat.TatsuSharp">GitHub</a>)</code></li>
           </ul>
         </ul>
-        <p>Unfortunately, I have plenty of projects that I started as proof-of-concepts or for testing, which never full saw a glimpse of completion.{" "}
+        <p>Unfortunately, I have plenty of projects that I started as proof-of-concepts or for testing, which never reached completion.{" "}
         If anyone is intersted, you are always free to contribute. I'll likely see any opened pull requests. I'm also willing to work on projects again if any interest in them is shown.</p>
       </section>
     </Layout>
