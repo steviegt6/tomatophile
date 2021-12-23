@@ -1,6 +1,7 @@
 import Layout from "../../../components/layout";
 import { getAllNoteIds, getNoteData } from "../../../components/utils/notes";
 import Head from "next/head";
+import notesModule from "../../../styles/notes.module.css";
 
 export default function NotePage({ noteData }) {
   return (
@@ -8,10 +9,44 @@ export default function NotePage({ noteData }) {
       <Head>
         <title>{noteData.title}</title>
       </Head>
-      <br />
+      <GetEntrypoint value={noteData.entrypoint} />
+      <GetWip value={noteData.wip} />
+      <GetStub value={noteData.stub} />
+      <GetGlossary value={noteData.glossary} />
+      <GetMessy value={noteData.messy} />
       <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
     </Layout>
   );
+}
+
+function GetEntrypoint({ value }) {
+  if (!value) return <div />;
+
+  return <div className={notesModule.fixedTopDisplay + " " + notesModule.entrypoint}>! This is an entrypoint page and does not contain information.</div>;
+}
+
+function GetWip({ value }) {
+  if (!value) return <div />;
+
+  return <div className={notesModule.fixedTopDisplay + " " + notesModule.wip}>! This page is a work-in-progress and is subject to heavily change.</div>;
+}
+
+function GetStub({ value }) {
+  if (!value) return <div />;
+
+  return <div className={notesModule.fixedTopDisplay + " " + notesModule.stub}>! This page is a stub and requires more information.</div>;
+}
+
+function GetGlossary({ value }) {
+  if (!value) return <div />;
+
+  return <div className={notesModule.fixedTopDisplay + " " + notesModule.glossary}>! This page is a glossary and does not contain information.</div>;
+}
+
+function GetMessy({ value }) {
+  if (!value) return <div />;
+
+  return <div className={notesModule.fixedTopDisplay + " " + notesModule.messy}>! This page does not meet our current standards and requires cleaning up.</div>;
 }
 
 export async function getStaticPaths() {

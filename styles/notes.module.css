@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+.entrypoint {
+  font-family: "JetBrains Mono", monospace;
+  color: yellowgreen;
+}
+
+.wip {
+  font-family: "JetBrains Mono", monospace;
+  color: yellow;
+}
+
+.stub {
+  font-family: "JetBrains Mono", monospace;
+  color: gray;
+}
+
+.glossary {
+  font-family: "JetBrains Mono", monospace;
+  color: pink;
+}
+
+.messy {
+  font-family: "JetBrains Mono", monospace;
+  color: lightcoral;
+}
+
+.fixedTopDisplay {
+  position: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 16px;
+}
