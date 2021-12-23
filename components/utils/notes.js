@@ -3,6 +3,7 @@ import { join } from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import gfm from "remark-gfm";
 
 const notesDir = join(process.cwd(), "submodules", "notes", "documentation");
 
@@ -26,6 +27,7 @@ export async function getNoteData(id) {
 
   const processedContent = await remark()
     .use(html)
+    .use(gfm)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
