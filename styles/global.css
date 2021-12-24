@@ -25,10 +25,10 @@ a:after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -0.01em;
+  bottom: 0em;
   right: 0;
   left: 0;
-  height: 0.05em;
+  height: .05em;
 }
 
 a:before {
@@ -47,6 +47,7 @@ a:after {
 a:hover {
   text-decoration: none;
   transition: width 0.3s;
+
   background: linear-gradient(
     270deg,
     #add8e6,

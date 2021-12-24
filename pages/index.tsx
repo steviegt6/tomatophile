@@ -14,7 +14,7 @@ export default function Home() {
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
             suppressHydrationWarning={true}
-            src={getRandomFile()}
+            src={"https://cdn.discordapp.com/avatars/269903979582849024/d9dc1539efec864ce5ebfaae3f806004.webp"}
             className={utilStyles.borderCircle}
             height={100}
             width={100}
@@ -58,7 +58,7 @@ export default function Home() {
           <ul>
             <li>Constellar - A modern, extensible, mixin-based Minecraft PvP client with standalone and Forge support. <code>(<a href="https://github.com/uranometrical/constellar">GitHub</a>)</code></li>
             <li>Aurora - A modular Minecraft launcher alternative striving to replace standalone client launches. <code>(<a href="https://github.com/uranometrical/aurora">GitHub</a>)</code></li>
-            <li><code>notes</code> - Public-domain documentation (often reverse-engineered) of other clients and modifications. Also has tutorials, among other things. <code>(<a href="https://github.com/uranometrical/notes">GitHub</a>)</code></li>
+            <li><code><Link href="/projects/uranometrical-notes/home"><a>notes</a></Link></code> - Public-domain documentation (often reverse-engineered) of other clients and modifications. Also has tutorials, among other things. <code>(<a href="https://github.com/uranometrical/notes">GitHub</a>)</code></li>
           </ul>
 
           <li><a href="https://github.com/TML-Patcher">TML.Patcher</a></li>
