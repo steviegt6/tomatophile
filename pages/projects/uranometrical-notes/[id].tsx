@@ -96,11 +96,11 @@ function GetHeader() {
     <>
       <Link href="/projects/uranometrical-notes/home">
         <a>
-          <code>uranometrical/notes</code>
+          <code className={"ignore-md"}>uranometrical/notes</code>
         </a>
       </Link>{" "}
-      - A comprehensive documentation project. | {" "}
-      <code>
+      - A comprehensive documentation project. |{" "}
+      <code className={"ignore-md"}>
         (<a href="https://github.com/uranometrical/notes">GitHub</a>)
       </code>
     </>

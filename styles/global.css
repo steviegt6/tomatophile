@@ -76,7 +76,7 @@ img {
   margin: 15px;
 }
 
-code {
+code:not(.ignore-md) {
   background-color: rgb(22, 22, 22);
   padding: .2em .4em;
   border-radius: 4px;

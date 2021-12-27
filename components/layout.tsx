@@ -57,10 +57,10 @@ export function Footer({ home }) {
       <ReturnHome home={home} />
       <p>
         This website is available on{" "}
-        <code>
+        <code className={"ignore-md"}>
           <a href="https://github.com/Steviegt6/Tomatophile">GitHub</a>
         </code>{" "}
-        under the <code>ISC</code> license.
+        under the <code className={"ignore-md"}>ISC</code> license.
       </p>
     </div>
   );

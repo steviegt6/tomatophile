@@ -43,13 +43,13 @@ export default function Home() {
             GitHub: <a href="https://github.com/Steviegt6">Steviegt6</a>
           </li>
           <li>
-            Discord: <code>Tomat#0001</code>
+            Discord: <code className={"ignore-md"}>Tomat#0001</code>
           </li>
           <li>
-            Matrix: <code>@tomat:matrix.org</code>
+            Matrix: <code className={"ignore-md"}>@tomat:matrix.org</code>
           </li>
           <li>
-            Email: <code>xxlennygamerxx@gmail.com</code> (no, that is not a
+            Email: <code className={"ignore-md"}>xxlennygamerxx@gmail.com</code> (no, that is not a
             joke)
           </li>
         </ul>
@@ -75,14 +75,14 @@ export default function Home() {
                 <a>Tomatophile</a>
               </Link>{" "}
               - The source-code for this site.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/Steviegt6/Tomatophile">GitHub</a>)
               </code>
             </li>
             <li>
               Stardew64Installer - A simple program that patches a Linux copy of
               Stardew Valley to work on Windows.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (
                 <a href="https://github.com/Steviegt6/Stardew64Installer">
                   GitHub
@@ -93,7 +93,7 @@ export default function Home() {
             <li>
               Lunacy - A modification for Lunar Client's launcher, worked by
               patching unpacked files.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/Steviegt6/Lunacy">GitHub</a>)
               </code>
             </li>
@@ -110,7 +110,7 @@ export default function Home() {
             <li>
               Constellar - A modern, extensible, mixin-based Minecraft PvP
               client with standalone and Forge support.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (
                 <a href="https://github.com/uranometrical/constellar">GitHub</a>
                 )
@@ -119,19 +119,19 @@ export default function Home() {
             <li>
               Aurora - A modular Minecraft launcher alternative striving to
               replace standalone client launches.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/uranometrical/aurora">GitHub</a>)
               </code>
             </li>
             <li>
-              <code>
+              <code className={"ignore-md"}>
                 <Link href="/projects/uranometrical-notes/home">
                   <a>notes</a>
                 </Link>
               </code>{" "}
               - Public-domain documentation (often reverse-engineered) of other
               clients and modifications. Also has tutorials, among other things.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/uranometrical/notes">GitHub</a>)
               </code>
             </li>
@@ -143,9 +143,9 @@ export default function Home() {
           <ul>
             <li>
               TML.Patcher - A command-line interface program for unpacking,
-              repacking, and decompiling <code>.tmod</code> files for
+              repacking, and decompiling <code className={"ignore-md"}>.tmod</code> files for
               modifications and compatibility.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/TML-Patcher/TML.Patcher">GitHub</a>
                 )
               </code>
@@ -153,7 +153,7 @@ export default function Home() {
             <li>
               Terraclient - A Terraria utility client developed with anarchy
               servers in mind.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/TML-Patcher/Terraclient">GitHub</a>
                 )
               </code>
@@ -166,14 +166,14 @@ export default function Home() {
           <ul>
             <li>
               Tomat.TomatBot - A W.I.P., general-purpose Discord bot.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (<a href="https://github.com/TomatCord/TomatBot">GitHub</a>)
               </code>
             </li>
             <li>
               Tomat.Framework - A framework for Discord bots running{" "}
-              <code>Discord.NET</code>.{" "}
-              <code>
+              <code className={"ignore-md"}>Discord.NET</code>.{" "}
+              <code className={"ignore-md"}>
                 (
                 <a href="https://github.com/TomatCord/Tomat.Framework">
                   GitHub
@@ -183,7 +183,7 @@ export default function Home() {
             </li>
             <li>
               Tomat.TatsuSharp - A library that wraps around Tatsu's API.{" "}
-              <code>
+              <code className={"ignore-md"}>
                 (
                 <a href="https://github.com/TomatCord/Tomat.TatsuSharp">
                   GitHub
