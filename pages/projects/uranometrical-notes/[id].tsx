@@ -7,15 +7,7 @@ import Link from "next/link";
 export default function NotePage({ noteData }) {
   setHeader(
     <p>
-      <Link href="/projects/uranometrical-notes/home">
-        <a>
-          <code>uranometrical/notes</code>
-        </a>
-      </Link>{" "}
-      - A comprehensive documentation project. |{" "}
-      <code>
-        (<a href="https://github.com/uranometrical/notes">GitHub</a>)
-      </code>
+      <GetHeader />
     </p>
   );
 
@@ -29,6 +21,7 @@ export default function NotePage({ noteData }) {
       <GetStub value={noteData.stub} />
       <GetGlossary value={noteData.glossary} />
       <GetMessy value={noteData.messy} />
+      <SetLastUpdated value={noteData.lastUpdated} />
       <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
     </Layout>
   );
@@ -81,6 +74,36 @@ function GetMessy({ value }) {
     <div className={notesModule.fixedTopDisplay + " " + notesModule.messy}>
       ! This page does not meet our current standards and requires cleaning up.
     </div>
+  );
+}
+
+function SetLastUpdated({ value }) {
+  if (!value) return <div />;
+
+  setHeader(
+    <p>
+      <GetHeader />
+      <br />
+      Information up-to-date as of: {value}
+    </p>
+  );
+
+  return <div />;
+}
+
+function GetHeader() {
+  return (
+    <>
+      <Link href="/projects/uranometrical-notes/home">
+        <a>
+          <code>uranometrical/notes</code>
+        </a>
+      </Link>{" "}
+      - A comprehensive documentation project. | {" "}
+      <code>
+        (<a href="https://github.com/uranometrical/notes">GitHub</a>)
+      </code>
+    </>
   );
 }
 
