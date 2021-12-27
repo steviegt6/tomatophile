@@ -68,7 +68,7 @@
 
 .progressContainer {
   width: 100%;
-  background-color: transparent;
+  background-color: #405055; /* supply a color here so the header doesn't appear to be floating */
   height: 5px;
   display: block;
 }
