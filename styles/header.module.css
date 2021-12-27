@@ -8,7 +8,7 @@
   margin-top: 5px; /* use a 5px margin to allow the progress bar to be visible - todo: display progress bar under instead? */
   width: 100%;
   background-color: #101010;
-  display: flex;
+  /*display: flex;*/ /* as far as I can tell, this isn't required. */
   text-align: center;
   justify-content: center;
   font-size: 15px;
