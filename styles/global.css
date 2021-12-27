@@ -76,6 +76,13 @@ img {
   margin: 15px;
 }
 
+code {
+  background-color: rgb(22, 22, 22);
+  padding: .2em .4em;
+  border-radius: 4px;
+  font-size: 80%;
+}
+
 .header {
   margin-bottom: 2rem;
 }
