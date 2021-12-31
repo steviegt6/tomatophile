@@ -18,7 +18,7 @@ export default function Home() {
           <img
             suppressHydrationWarning={true}
             src={
-              "https://cdn.discordapp.com/avatars/269903979582849024/d9dc1539efec864ce5ebfaae3f806004.webp"
+              "https://cdn.discordapp.com/avatars/269903979582849024/dd48c750c2ab4be7b3c228e92562e2df.webp"
             }
             className={utilStyles.borderCircle}
             height={100}
