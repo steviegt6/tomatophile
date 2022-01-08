@@ -4,9 +4,26 @@ import { setHeader } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import styles from "../components/layout.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   setHeader(<p>Welcome to my website!</p>);
+
+  function copy(text) {
+    navigator.clipboard.writeText(text);
+  }
+
+  function copyDiscord() {
+    copy("Tomat#0001");
+  }
+
+  function copyMatrix() {
+    copy("@tomat:matrix.org");
+  }
+
+  function copyEmail() {
+    copy("xxlennygamerxx@gmail.com");
+  }
 
   return (
     <Layout home>
@@ -31,33 +48,74 @@ export default function Home() {
       <section>
         <h2>Who am I?</h2>
         <p>
-          I'm Tomat, otherwise known as Stevie. I'm a professionally
-          unprofessional software developer and game modder.
+          I'm Tomat, otherwise known as Stevie. I'm a &quot;professionally
+          unprofessional&quot; software developer and game modder. I enjoy
+          reverse-engineering and modding software, as well as sharing my
+          creations with others.
         </p>
       </section>
+      <br />
       <section>
-        <h2>Want to contact me?</h2>
-        <p>Feel free! I'm always open to talk.</p>
-        <ul>
-          <li>
-            GitHub: <a href="https://github.com/Steviegt6">Steviegt6</a>
-          </li>
-          <li>
-            Discord: <code className={"ignore-md"}>Tomat#0001</code>
-          </li>
-          <li>
-            Matrix: <code className={"ignore-md"}>@tomat:matrix.org</code>
-          </li>
-          <li>
-            Email: <code className={"ignore-md"}>xxlennygamerxx@gmail.com</code> (no, that is not a
-            joke)
-          </li>
-        </ul>
-        <p>
-          You can also find me on various other websites, it shouldn't be hard.{" "}
-          I go by "Steviegt6", "Tomat", or "Tomatophile", most often.
-        </p>
+        <h2>Socials 'n Stuff</h2>
+
+        <h5 className={utilStyles.tip}>
+          <p>Click to open my profile.</p>
+        </h5>
+        <div className={utilStyles.flexDiv + " " + utilStyles.svgDisplay}>
+          <a id="ignore" href="https://github.com/Steviegt6">
+            <Image
+              src="/resources/fontawesome-free/svgs/brands/github.svg"
+              height={64}
+              width={64}
+            />
+          </a>
+          <a id="ignore" href="https://reddit.com/u/Steviegt6">
+            <Image
+              src="/resources/fontawesome-free/svgs/brands/reddit.svg"
+              height={64}
+              width={64}
+            />
+          </a>
+          <a
+            id="ignore"
+            href="https://www.youtube.com/channel/UCfbypg5MgXPFPnJkP-55gRA"
+          >
+            <Image
+              src="/resources/fontawesome-free/svgs/brands/youtube.svg"
+              height={64}
+              width={64}
+            />
+          </a>
+        </div>
+
+        <br />
+
+        <h5 className={utilStyles.tip}>
+          <p>Click to copy identifiers.</p>
+        </h5>
+        <div className={utilStyles.flexDiv + " " + utilStyles.svgDisplay}>
+          <Image
+            src="/resources/fontawesome-free/svgs/brands/discord.svg"
+            height={64}
+            width={64}
+            onClick={copyDiscord}
+          />
+          <Image
+            src="/resources/images/element.png"
+            height={64}
+            width={64}
+            onClick={copyMatrix}
+          />
+          <Image
+            src="/resources/fontawesome-free/svgs/solid/envelope.svg"
+            height={64}
+            width={64}
+            onClick={copyEmail}
+          />
+        </div>
       </section>
+
+      {/*
       <section>
         <h2>Interested in what I develop?</h2>
         <p>
@@ -143,8 +201,9 @@ export default function Home() {
           <ul>
             <li>
               TML.Patcher - A command-line interface program for unpacking,
-              repacking, and decompiling <code className={"ignore-md"}>.tmod</code> files for
-              modifications and compatibility.{" "}
+              repacking, and decompiling{" "}
+              <code className={"ignore-md"}>.tmod</code> files for modifications
+              and compatibility.{" "}
               <code className={"ignore-md"}>
                 (<a href="https://github.com/TML-Patcher/TML.Patcher">GitHub</a>
                 )
@@ -201,6 +260,7 @@ export default function Home() {
           again if any interest in them is shown.
         </p>
       </section>
+                */}
     </Layout>
   );
 }

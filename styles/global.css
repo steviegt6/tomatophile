@@ -29,6 +29,8 @@ h6 {
   text-align: center;
   letter-spacing: 2px;
   transition: letter-spacing 0.3s;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1:hover,
@@ -42,8 +44,8 @@ h6:hover {
   transition: letter-spacing 0.3s;
 }
 
-a:before,
-a:after {
+a:not(#ignore):before,
+a:not(#ignore):after {
   content: "";
   display: block;
   position: absolute;
@@ -53,20 +55,20 @@ a:after {
   height: 0.05em;
 }
 
-a:before {
+a:not(#ignore):before {
   width: 100%;
   transition: width 0.3s;
   background-color: currentColor;
   background: transparent;
 }
 
-a:after {
+a:not(#ignore):after {
   width: 0;
   transition: width 0.3s;
   background: lightblue;
 }
 
-a:hover {
+a:not(#ignore):hover {
   text-decoration: none;
   transition: width 0.3s;
 
@@ -88,7 +90,7 @@ a:hover {
   animation: bg-grad-anim 3s ease infinite;
 }
 
-a:hover:after {
+a:not(#ignore):hover:after {
   width: 100%;
 }
 

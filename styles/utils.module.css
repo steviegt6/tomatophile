@@ -89,3 +89,51 @@
   rotate: 360deg;
   transition: rotate 0.8s;
 }
+
+.flexDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.flexDiv img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(49deg) brightness(103%) contrast(103%);
+
+  /* animation */
+  opacity: 65%;
+  scale: 0.75;
+  transform: translateY(10px);
+  transition: all 0.5s;
+}
+
+.flexDiv img:hover {
+  /* animation */
+  opacity: 100%;
+  scale: 1;
+  transform: translateY(0px);
+  transition: all 0.5s;
+  position: bottom 0px;
+}
+
+.tip {
+  color: gray;
+}
+
+#discord {
+  position: relative;
+}
+
+#discord:hover::after {
+  content: "Qewer#8693 on Discord!";
+  position: absolute;
+  top: 70px;
+  left: -50px;
+  width: 200px;
+  color: #dcdcdc;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 1;
+  font-family: var(--main-font), sans-serif;
+  font-size: 15px;
+}
