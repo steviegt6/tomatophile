@@ -20,7 +20,7 @@ export default function Home() {
             src={
               "https://cdn.discordapp.com/avatars/269903979582849024/dd48c750c2ab4be7b3c228e92562e2df.webp"
             }
-            className={utilStyles.borderCircle}
+            className={utilStyles.borderCircle + " " + utilStyles.pfp}
             height={100}
             width={100}
             alt={"Tomat"}

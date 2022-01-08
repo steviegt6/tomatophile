@@ -79,3 +79,13 @@
   display: block;
   height: inherit;
 }
+
+.pfp {
+  rotate: 0deg;
+  transition: rotate 0.8s;
+}
+
+.pfp:hover {
+  rotate: 360deg;
+  transition: rotate 0.8s;
+}
