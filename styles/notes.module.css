@@ -1,27 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 .entrypoint {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   color: yellowgreen;
 }
 
 .wip {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   color: yellow;
 }
 
 .stub {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   color: gray;
 }
 
 .glossary {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   color: pink;
 }
 
 .messy {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   color: lightcoral;
 }
 

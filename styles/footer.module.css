@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 .stickyFooter {
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'Fira Code', monospace;
   position: fixed;
   left: 0;
   bottom: 0;
