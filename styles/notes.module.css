@@ -1,27 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 .entrypoint {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: yellowgreen;
 }
 
 .wip {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: yellow;
 }
 
 .stub {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: gray;
 }
 
 .glossary {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: pink;
 }
 
 .messy {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: lightcoral;
 }
 

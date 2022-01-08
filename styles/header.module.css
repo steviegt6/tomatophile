@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 .stickyHeader {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   position: fixed;
   left: 0;
   top: 0;
