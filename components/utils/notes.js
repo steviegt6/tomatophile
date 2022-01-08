@@ -1,9 +1,14 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
-import gfm from "remark-gfm";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import remarkCodeFrontmatter from "remark-code-frontmatter";
+import rehypeDocument from "rehype-document";
+import rehypeFormat from "rehype-format";
+import rehypeStringify from "rehype-stringify";
+import rehypeHighlight from "rehype-highlight";
 
 const notesDir = join(process.cwd(), "submodules", "notes", "documentation");
 
@@ -25,9 +30,14 @@ export async function getNoteData(id) {
 
   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .use(gfm)
+  const processedContent = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(remarkCodeFrontmatter)
+    .use(rehypeDocument)
+    .use(rehypeFormat)
+    .use(rehypeStringify)
+    .use(rehypeHighlight)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 

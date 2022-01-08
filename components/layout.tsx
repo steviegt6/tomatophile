@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import footerStyles from "../styles/footer.module.css";
 import headerStyles from "../styles/header.module.css";
 import Link from "next/link";
+import Prism from "prismjs";
 
 export const siteTitle = "Tomat";
 

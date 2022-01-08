@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   line-height: 1.6;
   font-size: 18px;
   color: white;
@@ -78,7 +78,7 @@ img {
 
 code:not(.ignore-md) {
   background-color: rgb(22, 22, 22);
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 80%;
 }
@@ -133,4 +133,84 @@ code:not(.ignore-md) {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Tomorrow Night Theme */
+/* https://jmblog.github.io/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* https://jmblog.github.io/color-themes-for-google-code-highlightjs */
+.tomorrow-comment,
+pre .hljs-comment,
+pre .hljs-title {
+  color: #969896;
+}
+
+.tomorrow-red,
+pre .hljs-variable,
+pre .hljs-attribute,
+pre .hljs-tag,
+pre .hljs-regexp,
+pre .hljs-ruby .hljs-constant,
+pre .hljs-xml .hljs-tag .hljs-title,
+pre .hljs-xml .hljs-pi,
+pre .hljs-xml .hljs-doctype,
+pre .hljs-html .hljs-doctype,
+pre .hljs-css .hljs-id,
+pre .hljs-css .hljs-class,
+pre .hljs-css .hljs-pseudo {
+  color: #cc6666;
+}
+
+.tomorrow-orange,
+pre .hljs-number,
+pre .hljs-preprocessor,
+pre .hljs-built_in,
+pre .hljs-literal,
+pre .hljs-params,
+pre .hljs-constant {
+  color: #de935f;
+}
+
+.tomorrow-yellow,
+pre .hljs-class,
+pre .hljs-ruby .hljs-class .hljs-title,
+pre .hljs-css .hljs-rules .hljs-attribute {
+  color: #f0c674;
+}
+
+.tomorrow-green,
+pre .hljs-string,
+pre .hljs-value,
+pre .hljs-inheritance,
+pre .hljs-header,
+pre .hljs-ruby .hljs-symbol,
+pre .hljs-xml .hljs-cdata {
+  color: #b5bd68;
+}
+
+.tomorrow-aqua,
+pre .hljs-css .hljs-hexcolor {
+  color: #8abeb7;
+}
+
+.tomorrow-blue,
+pre .hljs-function,
+pre .hljs-python .hljs-decorator,
+pre .hljs-python .hljs-title,
+pre .hljs-ruby .hljs-function .hljs-title,
+pre .hljs-ruby .hljs-title .hljs-keyword,
+pre .hljs-perl .hljs-sub,
+pre .hljs-javascript .hljs-title,
+pre .hljs-coffeescript .hljs-title {
+  color: #81a2be;
+}
+
+.tomorrow-purple,
+pre .hljs-keyword,
+pre .hljs-javascript .hljs-function {
+  color: #b294bb;
+}
+
+pre code {
+  display: block;
 }

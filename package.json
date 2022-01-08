@@ -18,11 +18,23 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "latest",
+    "prismjs": "^1.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "rehype-document": "^6.0.1",
+    "rehype-format": "^4.0.1",
+    "rehype-highlight": "^5.0.2",
+    "rehype-stringify": "^9.0.2",
     "remark": "^14.0.2",
+    "remark-code-blocks": "^2.0.1",
+    "remark-code-extra": "^1.0.1",
+    "remark-code-frontmatter": "^1.0.0",
     "remark-gfm": "^3.0.1",
-    "remark-html": "^15.0.1"
+    "remark-highlight.js": "^7.0.1",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.2",
