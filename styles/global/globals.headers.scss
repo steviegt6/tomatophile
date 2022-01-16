@@ -1,0 +1,35 @@
+/* Simple global styling for headers. */
+
+// Mixin to easily apply to all headers.
+@mixin headers {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+@mixin hover-headers {
+  h1:hover:not(.ignore-headers),
+  h2:hover:not(.ignore-headers),
+  h3:hover:not(.ignore-headers),
+  h4:hover:not(.ignore-headers),
+  h5:hover:not(.ignore-headers),
+  h6:hover:not(.ignore-headers) {
+    @content;
+  }
+}
+
+// Animate a funny hover effect.
+@include headers {
+  letter-spacing: 2px;
+  text-align: center;
+  transition: letter-spacing 0.5s;
+}
+
+@include hover-headers() {
+  letter-spacing: 4px;
+}

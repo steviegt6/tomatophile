@@ -1,0 +1,19 @@
+/* Generic utilities. */
+
+// Generic flex-enabling tag.
+.centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+    // Basic padding.
+    max-width: 50rem;
+    padding: 0 2rem;
+    margin: 6rem auto 6rem;
+
+    // Center container contents.
+    @extend .centerFlex;
+    flex-direction: column;
+}
