@@ -3,57 +3,25 @@ import generic from "../styles/generic.module.scss";
 import index from "../styles/index/index.module.scss";
 import { IdentifierIcon, ProfileIcon } from "../components/Icon";
 import Link from "next/link";
-import { useEffect } from "react";
-import { join } from "path";
-import { readdirSync, readFileSync } from "fs";
-
-const bgJsonDir = join(process.cwd(), "", "modules", "local", "backgrounds");
+import Layout from "../components/Layout";
+import { resolveBgJsons } from "../components/utils/backgroundResolver";
 
 export default function Index({ bgJsons }: any) {
-  useEffect(() => {
-    console.log(bgJsons);
-  });
-
-  var bg = bgJsons[Math.floor(Math.random() * bgJsons.length)];
-  var bgJ = JSON.parse(bg);
-
   return (
-    <>
-      <div
-        style={{
-          backgroundImage: `url(${bgJ.src})`,
-          backgroundPosition: "center, center",
-          backgroundSize: "100%, 100%",
-          width: "100%",
-          height: "100%",
-          left: "0",
-          top: "0",
-          position: "fixed",
-          zIndex: -1,
-        }}
-        suppressHydrationWarning={true}
-      />
-      <div
-        className={generic.container}
-        style={{
-          backgroundColor: "rgb(0, 0, 0, 0.75)",
-          borderRadius: "20px",
-        }}
-      >
-        <Head>
-          <title>tomat</title>
-          <meta name="description" content="Tomato" />
-        </Head>
-        <div>
-          <GreetingSection />
-          <WhoAmISection />
-          <br />
-          <SocialsSection />
-          <br />
-          <PortfolioLinksSection />
-        </div>
+    <Layout bgJsons={bgJsons}>
+      <Head>
+        <title>tomat</title>
+        <meta name="description" content="Tomato" />
+      </Head>
+      <div>
+        <GreetingSection />
+        <WhoAmISection />
+        <br />
+        <SocialsSection />
+        <br />
+        <PortfolioLinksSection />
       </div>
-    </>
+    </Layout>
   );
 }
 
@@ -143,14 +111,7 @@ function PortfolioLinksSection() {
 }
 
 export async function getStaticProps({ params }: any) {
-  const bgJsons: string[] = [];
-
-  readdirSync(bgJsonDir).map((x) => {
-    if (x.startsWith("bg"))
-      bgJsons.push(readFileSync(join(bgJsonDir, x), "utf-8"));
-
-    return x;
-  });
+  const bgJsons: string[] = resolveBgJsons();
 
   return {
     props: {
