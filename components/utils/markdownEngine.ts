@@ -22,7 +22,7 @@ export function getAllPaths(directory: string): { params: { id: string } }[] {
   });
 }
 
-export async function getNoteData(directory: string, id: string) {
+export async function getMarkdownData(directory: string, id: string) {
   const fullPath = join(directory, `${id}.md`);
   const fileContents = readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
