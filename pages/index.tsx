@@ -117,5 +117,6 @@ export async function getStaticProps({ params }: any) {
     props: {
       bgJsons,
     },
+    revalidate: 1
   };
 }

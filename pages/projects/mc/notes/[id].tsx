@@ -41,5 +41,6 @@ export async function getStaticProps({ params }: any) {
       noteData,
       bgJsons
     },
+    revalidate: 1
   };
 }
