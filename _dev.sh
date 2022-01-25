@@ -1,3 +1,2 @@
-rm -rf ./modules
-git clone https://github.com/uranometrical/notes ./modules/notes
+bash _refesh.sh
 npm run dev

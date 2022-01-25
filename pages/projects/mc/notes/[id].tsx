@@ -27,12 +27,12 @@ export async function getStaticPaths() {
     };
   }
   
-  export async function getStaticProps({ params }:any) {
-    const noteData = await getMarkdownData(notesDir, params.id);
-  
-    return {
-      props: {
-        noteData,
-      },
-    };
-  }
+export async function getStaticProps({ params }:any) {
+  const noteData = await getMarkdownData(notesDir, params.id);
+
+  return {
+    props: {
+      noteData,
+    },
+  };
+}
