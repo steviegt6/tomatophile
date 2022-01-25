@@ -34,7 +34,7 @@ function GreetingSection() {
     <>
       <div className={generic.centerFlex}>
         <img src="/pfp.png" width={100} height={100} className={index.pfp} />
-        <h1>Hey there, I'm Tomat!</h1>
+        <h1>Hey there, I&apos;m Tomat!</h1>
       </div>
     </>
   );
@@ -45,8 +45,8 @@ function WhoAmISection() {
     <>
       <div className={index.flexConstrain}><h2>Who am I?</h2></div>
       <p>
-        I'm Tomat, otherwise known as Stevie. Call me a &quot;professionally
-        unprofessional&quot; software develop, if you'd like. Most of my effort
+        I&apos;m Tomat, otherwise known as Stevie. Call me a &quot;professionally
+        unprofessional&quot; software develop, if you&apos;d like. Most of my effort
         is put into game modding, but I have developed software independently
         and have created outside tools to aid in modding. I enjoy
         reverse-engineering, programming, and sharing my creations with others.
@@ -58,7 +58,7 @@ function WhoAmISection() {
 function SocialsSection() {
   return (
     <>
-      <div className={index.flexConstrain}><h2>Socials 'n Stuff</h2></div>
+      <div className={index.flexConstrain}><h2>Socials &apos;n Stuff</h2></div>
       <h6 className={index.tip + " " + index.firstTip + " ignore-headers"}>
         Click to open a profile.
       </h6>
@@ -96,7 +96,7 @@ function PortfolioLinksSection() {
     <>
       <div className={index.flexConstrain}><h2>Portfolio</h2></div>
       <p>
-        Interested in what I make? Want to know what I'm capable of? Sweet! Stay
+        Interested in what I make? Want to know what I&apos;m capable of? Sweet! Stay
         tuned for an{" "}
         <Link href="/me/portfolio">
           <a>eventual portfolio</a>

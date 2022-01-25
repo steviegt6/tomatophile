@@ -6,7 +6,7 @@ export default function Custom404() {
     <div className={fourofour.centeredDiv}>
       <h1>Error 404: Page Not Found!</h1>
       <p>
-        Quite odd, isn't it? If you believe this page{" "}
+        Quite odd, isn&apos;t it? If you believe this page{" "}
         <strong>
           <em>should</em>
         </strong>{" "}
@@ -18,7 +18,7 @@ export default function Custom404() {
         <br />
         <br />I prefer not to delete content. I like to keep everything
         accessible to everyone. If a page happens to be missing, it was either
-        moved or is likely a mistake. Regardless, there isn't much use remaining
+        moved or is likely a mistake. Regardless, there isn&apos;t much use remaining
         here. Consider returning{" "}
         <Link href="/">
           <a>home</a>
