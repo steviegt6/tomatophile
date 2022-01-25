@@ -44,7 +44,7 @@ function WhoAmISection() {
       </div>
       <p>
         I&apos;m Tomat, otherwise known as Stevie. Call me a
-        &quot;professionally unprofessional&quot; software develop, if
+        &quot;professionally unprofessional&quot; software developer, if
         you&apos;d like. Most of my effort is put into game modding, but I have
         developed software independently and have created outside tools to aid
         in modding. I enjoy reverse-engineering, programming, and sharing my
@@ -78,7 +78,7 @@ function SocialsSection() {
         />
       </div>
       <h6 className={index.tip + " ignore-headers"}>
-        Click to open a profile.
+        Click to copy an ID.
       </h6>
       <div className={index.iconArray}>
         <IdentifierIcon src="/icons/discord.png" value="Tomat#0001" />
