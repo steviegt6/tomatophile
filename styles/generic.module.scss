@@ -8,12 +8,31 @@
 }
 
 .container {
-    // Basic padding.
-    max-width: 50rem;
-    padding: 0 2rem;
-    margin: 6rem auto 6rem;
+  // Basic padding.
+  max-width: 50rem;
+  padding: 0 2rem;
+  margin: 6rem auto 6rem;
 
-    // Center container contents.
-    @extend .centerFlex;
-    flex-direction: column;
+  // Center container contents.
+  @extend .centerFlex;
+  flex-direction: column;
+}
+
+.floatingContainer {
+  padding: 1rem;
+
+  // Center container contents.
+  @extend .centerFlex;
+  flex-direction: column;
+
+  max-width: 175px;
+
+  position: fixed;
+
+  top: 8px;
+  left: 8px;
+
+  .h1 {
+    margin: 0;
+  }
 }

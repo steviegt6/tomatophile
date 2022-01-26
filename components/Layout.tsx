@@ -10,7 +10,7 @@ export default function Layout({ bgJsons, children }: any) {
         style={{
           backgroundImage: `url(${bgJ.src})`,
           backgroundPosition: "center, center",
-          backgroundSize: "auto",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           width: "100%",
           height: "100%",
@@ -21,6 +21,20 @@ export default function Layout({ bgJsons, children }: any) {
         }}
         suppressHydrationWarning={true}
       />
+      <div
+        className={generic.floatingContainer}
+        style={{
+          backgroundColor: "rgb(0, 0, 0, 0.75)",
+          borderRadius: "20px",
+        }}
+      >
+        <h3 className={"ignore-headers"} style={{ margin: "0 0 0 0" }}>
+          Artwork Info.
+        </h3>
+        <p style={{ margin: "0 0 0 0" }}>
+          <strong>Artist:</strong> <a href={bgJ.pixiv}>{bgJ.author}</a>
+        </p>
+      </div>
       <div
         className={generic.container}
         style={{
