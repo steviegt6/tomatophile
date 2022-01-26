@@ -1,6 +1,6 @@
 import generic from "../styles/generic.module.scss";
 
-export default function Layout({ bgJsons, children }: any) {
+export default function Layout({ bgJsons, children, extra = null }: any) {
   var bg = bgJsons[Math.floor(Math.random() * bgJsons.length)];
   var bgJ = JSON.parse(bg);
 
@@ -22,6 +22,7 @@ export default function Layout({ bgJsons, children }: any) {
         }}
         suppressHydrationWarning={true}
       />
+      {extra}
       <div
         className={generic.floatingContainer}
         style={{
