@@ -25,7 +25,7 @@ export default function Layout({ bgJsons, children }: any) {
         className={generic.floatingContainer}
         style={{
           backgroundColor: "rgb(0, 0, 0, 0.75)",
-          borderRadius: "20px",
+          borderRadius: "8px",
         }}
       >
         <h3 className={"ignore-headers"} style={{ margin: "0 0 0 0" }}>
@@ -39,7 +39,7 @@ export default function Layout({ bgJsons, children }: any) {
         className={generic.container}
         style={{
           backgroundColor: "rgb(0, 0, 0, 0.75)",
-          borderRadius: "20px",
+          borderRadius: "8px",
         }}
       >
         {children}
