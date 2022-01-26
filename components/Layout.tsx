@@ -10,7 +10,8 @@ export default function Layout({ bgJsons, children }: any) {
         style={{
           backgroundImage: `url(${bgJ.src})`,
           backgroundPosition: "center, center",
-          backgroundSize: "100%, 100%",
+          backgroundSize: "auto",
+          backgroundRepeat: "no-repeat",
           width: "100%",
           height: "100%",
           left: "0",
