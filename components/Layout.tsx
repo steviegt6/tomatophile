@@ -12,6 +12,7 @@ export default function Layout({ bgJsons, children }: any) {
           backgroundPosition: "center, center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundColor: "black",
           width: "100%",
           height: "100%",
           left: "0",
