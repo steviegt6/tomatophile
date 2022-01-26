@@ -59,7 +59,6 @@ export async function getMarkdownData(directory: string, id: string[]) {
   }
 
   const fullPath = join(directory, `${id.join("/")}.md`);
-  console.log(fullPath);
   const fileContents = readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
