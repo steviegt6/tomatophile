@@ -29,7 +29,7 @@ function GreetingSection() {
   return (
     <>
       <div className={generic.centerFlex}>
-        <img src="/pfp.png" width={100} height={100} className={index.pfp} />
+        <img src="/pfp.jpg" width={100} height={100} className={index.pfp} />
         <h1>Hey there, I&apos;m Tomat!</h1>
       </div>
     </>
