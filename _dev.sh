@@ -1,2 +1,2 @@
-bash _refesh.sh
+bash _refresh.sh
 npm run dev

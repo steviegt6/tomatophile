@@ -6,26 +6,23 @@ import {
   getAllPaths,
   getMarkdownData,
 } from "../../../../components/utils/markdownEngine";
-import generic from "../../../../styles/generic.module.scss";
 
 const notesDir = join(process.cwd(), "", "modules", "notes", "documentation");
 
 export default function NotePage({ noteData, bgJsons }: any) {
   return (
     <Layout bgJsons={bgJsons}>
-      <div className={generic.container}>
-        <Head>
-          <title>{noteData.tile}</title>
-        </Head>
-        <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
-      </div>
+      <Head>
+        <title>{noteData.tile}</title>
+      </Head>
+      <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
     </Layout>
   );
 }
 
 export async function getStaticPaths() {
   const paths = getAllPaths(notesDir);
-
+  
   return {
     paths,
     fallback: false,
@@ -39,8 +36,8 @@ export async function getStaticProps({ params }: any) {
   return {
     props: {
       noteData,
-      bgJsons
+      bgJsons,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }

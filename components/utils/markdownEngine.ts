@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "fs";
+import { readdirSync, readFileSync, statSync } from "fs";
 import { unified } from "unified";
 import matter from "gray-matter";
 import remarkParse from "remark-parse";
@@ -10,20 +10,56 @@ import rehypeStringify from "rehype-stringify";
 import rehypeHighlight from "rehype-highlight";
 import { join } from "path";
 
-export function getAllPaths(directory: string): { params: { id: string } }[] {
-  const fileNames = readdirSync(directory);
+export function collectFiles(directory: string, files: string[]): string[] {
+  const dirContents = readdirSync(directory);
+
+  dirContents.forEach((x) => {
+    if (statSync(join(directory, x)).isDirectory()) {
+      files = collectFiles(join(directory, x), files);
+    } else {
+      files.push(join(directory, x));
+    }
+  });
+
+  return files;
+}
+
+export function getAllPaths(directory: string): { params: { id: string[] } }[] {
+  const fileNames = collectFiles(directory, []);
 
   return fileNames.map((x) => {
+    const retVal: string[] = x
+      .substring(directory.length + 1)
+      .replaceAll("\\", "/")
+      .replace(/\.md$/, "")
+      .toLowerCase()
+      .split("/");
+
+    const locale = retVal[retVal.length - 1];
+
+    if (locale.length == 2) {
+      retVal.pop();
+      retVal.unshift(locale);
+    }
+
     return {
       params: {
-        id: x.replace(/\.md$/, "").toLowerCase(),
+        id: retVal,
       },
     };
   });
 }
 
-export async function getMarkdownData(directory: string, id: string) {
-  const fullPath = join(directory, `${id}.md`);
+export async function getMarkdownData(directory: string, id: string[]) {
+  const locale = id[0];
+
+  if (locale.length == 2) {
+    id.shift();
+    id.push(locale);
+  }
+
+  const fullPath = join(directory, `${id.join("/")}.md`);
+  console.log(fullPath);
   const fileContents = readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
   const processedContent = await unified()
