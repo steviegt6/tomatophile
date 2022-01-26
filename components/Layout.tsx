@@ -33,7 +33,10 @@ export default function Layout({ bgJsons, children }: any) {
           Artwork Info.
         </h3>
         <p style={{ margin: "0 0 0 0" }}>
-          <strong>Artist:</strong> <a href={bgJ.pixiv}>{bgJ.author}</a>
+          <strong>Artist:</strong> <a
+            href={bgJ.pixiv}
+            suppressHydrationWarning={true}
+          >{bgJ.author}</a>
         </p>
       </div>
       <div
