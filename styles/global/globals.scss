@@ -1,0 +1,20 @@
+/* Uncategorized global styles. Individual pages with unique styling will have their own modules. */
+
+@import "../fonts.scss";
+@import "../colors.scss";
+@import "globals.links.scss";
+@import "globals.headers.scss";
+
+html,
+body {
+  font-family: $font-quicksand;
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: $text-white;
+
+  ::selection {
+    background-color: white;
+    color: black;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../fonts.scss";
+
+.header {
+    font-family: $font-quicksand;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    background-color: #101010;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.header:hover {
+    transform: translateY(-10);
+}
