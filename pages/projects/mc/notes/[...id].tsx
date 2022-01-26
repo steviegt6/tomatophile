@@ -44,27 +44,49 @@ function GetBar({ value }: any) {
   const metadata: [string, string][] = [];
 
   if (value.entrypoint) {
-    metadata.push(["yellowgreen", "This is an entrypoint article which links to other articles."])
+    metadata.push([
+      "yellowgreen",
+      "This is an entrypoint article which links to other articles.",
+    ]);
   }
 
   if (value.wip) {
-    metadata.push(["yellow", "This is a work-in-progress article, and is subject to change."])
+    metadata.push([
+      "yellow",
+      "This is a work-in-progress article, and is subject to change.",
+    ]);
   }
 
   if (value.stub) {
-    metadata.push(["gray", "The article is a stub and requires more information."])
+    metadata.push([
+      "gray",
+      "The article is a stub and requires more information.",
+    ]);
   }
 
   if (value.glossary) {
-    metadata.push(["pink", "The is a glossary and strictly links to other pages."])
+    metadata.push([
+      "pink",
+      "The is a glossary and strictly links to other pages.",
+    ]);
   }
 
   if (value.messy) {
-    metadata.push(["lightcoral", "The article does not meet our standards and requires cleaning up."])
+    metadata.push([
+      "lightcoral",
+      "The article does not meet our standards and requires cleaning up.",
+    ]);
   }
 
   const elements = metadata.map((x) => {
-    return <GetBarDiv color={x[0]} width={1 / metadata.length} title={x[1]} />
+    return (
+      <GetBarDiv
+        key={x[0]}
+        color={x[0]}
+        width={1 / metadata.length}
+        title={x[1]}
+      />
+    );
   });
 
   return (
