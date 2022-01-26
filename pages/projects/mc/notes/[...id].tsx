@@ -24,7 +24,6 @@ export default function NotePage({ noteData, bgJsons }: any) {
 }
 
 function ProcessNoteData({ noteData }: any) {
-  console.log(noteData);
   return (
     <div
       className={generic.container}

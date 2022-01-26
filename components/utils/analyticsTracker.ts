@@ -11,3 +11,7 @@ export function pushView(url: string) {
     views.set(url, ++count);
     return count;;
 }
+
+export function save() {
+    
+}
