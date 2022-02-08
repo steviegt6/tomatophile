@@ -4,6 +4,7 @@
 @import "../colors.scss";
 @import "globals.links.scss";
 @import "globals.headers.scss";
+@import "globals.pre.scss";
 
 html,
 body {
@@ -20,6 +21,5 @@ body {
 }
 
 pre {
-  max-width: 50rem;
-  overflow-x: scroll;
+  max-width: 50em;
 }
