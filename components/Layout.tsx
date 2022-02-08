@@ -26,7 +26,7 @@ export default function Layout({ bgJsons, children, extra = null }: any) {
       <div
         className={generic.floatingContainer}
         style={{
-          backgroundColor: "rgb(0, 0, 0, 0.75)",
+          backgroundColor: "rgb(0, 0, 0, 0.95)",
           borderRadius: "6px",
         }}
       >
@@ -43,7 +43,7 @@ export default function Layout({ bgJsons, children, extra = null }: any) {
       <div
         className={generic.container}
         style={{
-          backgroundColor: "rgb(0, 0, 0, 0.75)",
+          backgroundColor: "rgb(0, 0, 0, 0.95)",
           borderRadius: "6px",
         }}
       >

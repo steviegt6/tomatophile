@@ -9,7 +9,7 @@ export default function Custom404({ bgJsons }: any) {
       <div
         className={fourofour.centeredDiv}
         style={{
-          backgroundColor: "rgb(0, 0, 0, 0.75)",
+          backgroundColor: "rgb(0, 0, 0, 0.9)",
           borderRadius: "6px",
           padding: "1em 2em"
         }}

@@ -28,7 +28,7 @@ function ProcessNoteData({ noteData }: any) {
     <div
       className={generic.container}
       style={{
-        backgroundColor: "rgb(0, 0, 0, 0.75)",
+        backgroundColor: "rgb(0, 0, 0, 0.9)",
         borderRadius: "6px",
         margin: "6rem auto -4rem",
       }}
