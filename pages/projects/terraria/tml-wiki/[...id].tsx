@@ -8,12 +8,24 @@ import {
 } from "../../../../components/utils/markdownEngine";
 import generic from "../../../../styles/generic.module.scss";
 
-const tmlWikiDir = join(process.cwd(), "", "modules", "tml-wiki", "documentation");
+const tmlWikiDir = join(
+  process.cwd(),
+  "",
+  "modules",
+  "tml-wiki",
+  "documentation"
+);
 
-export default function TMLWikiPage({ tmlWikiData: tmlWikiData, bgJsons }: any) {
+export default function TMLWikiPage({
+  tmlWikiData: tmlWikiData,
+  bgJsons,
+}: any) {
   return (
     <>
-      <Layout bgJsons={bgJsons} extra={<ProcessTMLWikiData tmlWikiData={tmlWikiData} />}>
+      <Layout
+        bgJsons={bgJsons}
+        extra={<ProcessTMLWikiData tmlWikiData={tmlWikiData} />}
+      >
         <Head>
           <title>{tmlWikiData.title}</title>
         </Head>

@@ -77,9 +77,7 @@ function SocialsSection() {
           value="https://www.youtube.com/channel/UCfbypg5MgXPFPnJkP-55gRA"
         />
       </div>
-      <h6 className={index.tip + " ignore-headers"}>
-        Click to copy an ID.
-      </h6>
+      <h6 className={index.tip + " ignore-headers"}>Click to copy an ID.</h6>
       <div className={index.iconArray}>
         <IdentifierIcon src="/icons/discord.png" value="Tomat#0001" />
         <IdentifierIcon src="/icons/matrix.png" value="@tomat:matrix.org" />
@@ -117,6 +115,6 @@ export async function getStaticProps({ params }: any) {
     props: {
       bgJsons,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }

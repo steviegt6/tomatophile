@@ -11,7 +11,7 @@ export default function Custom404({ bgJsons }: any) {
         style={{
           backgroundColor: "rgb(0, 0, 0, 0.9)",
           borderRadius: "6px",
-          padding: "1em 2em"
+          padding: "1em 2em",
         }}
       >
         <h1>Error 404: Page Not Found!</h1>
@@ -49,6 +49,6 @@ export async function getStaticProps({ params }: any) {
     props: {
       bgJsons,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }
