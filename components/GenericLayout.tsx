@@ -1,6 +1,6 @@
 import generic from "../styles/generic.module.scss";
 
-export default function Layout({ bgJsons, children, extra = null }: any) {
+export default function GenericLayout({ bgJsons, children, extra = null }: any) {
   var bg = bgJsons[Math.floor(Math.random() * bgJsons.length)];
   var bgJ = JSON.parse(bg);
 

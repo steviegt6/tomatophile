@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { join } from "path";
-import Layout from "../../../../components/Layout";
+import GenericLayout from "../../../../components/GenericLayout";
 import { resolveBgJsons } from "../../../../components/utils/backgroundResolver";
 import {
   getAllPaths,
@@ -22,7 +22,7 @@ export default function TMLWikiPage({
 }: any) {
   return (
     <>
-      <Layout
+      <GenericLayout
         bgJsons={bgJsons}
         extra={<ProcessTMLWikiData tmlWikiData={tmlWikiData} />}
       >
@@ -30,7 +30,7 @@ export default function TMLWikiPage({
           <title>{tmlWikiData.title}</title>
         </Head>
         <div dangerouslySetInnerHTML={{ __html: tmlWikiData.contentHtml }} />
-      </Layout>
+      </GenericLayout>
     </>
   );
 }

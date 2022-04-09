@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
+import GenericLayout from "../components/GenericLayout";
 import { resolveBgJsons } from "../components/utils/backgroundResolver";
 import fourofour from "../styles/404/404.module.scss";
 
 export default function Custom404({ bgJsons }: any) {
   return (
-    <Layout bgJsons={bgJsons}>
+    <GenericLayout bgJsons={bgJsons}>
       <div
         className={fourofour.centeredDiv}
         style={{
@@ -38,7 +38,7 @@ export default function Custom404({ bgJsons }: any) {
         <br />
         <img src={"/logo-inverted.png"} width={228} height={50}></img>
       </div>
-    </Layout>
+    </GenericLayout>
   );
 }
 

@@ -3,12 +3,12 @@ import generic from "../styles/generic.module.scss";
 import index from "../styles/index/index.module.scss";
 import { IdentifierIcon, ProfileIcon } from "../components/Icon";
 import Link from "next/link";
-import Layout from "../components/Layout";
+import GenericLayout from "../components/GenericLayout";
 import { resolveBgJsons } from "../components/utils/backgroundResolver";
 
 export default function Index({ bgJsons }: any) {
   return (
-    <Layout bgJsons={bgJsons}>
+    <GenericLayout bgJsons={bgJsons}>
       <Head>
         <title>tomat</title>
         <meta name="description" content="Tomato" />
@@ -21,7 +21,7 @@ export default function Index({ bgJsons }: any) {
         <br />
         <PortfolioLinksSection />
       </div>
-    </Layout>
+    </GenericLayout>
   );
 }
 

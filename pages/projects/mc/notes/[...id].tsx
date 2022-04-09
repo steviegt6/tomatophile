@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { join } from "path";
-import Layout from "../../../../components/Layout";
+import GenericLayout from "../../../../components/GenericLayout";
 import { resolveBgJsons } from "../../../../components/utils/backgroundResolver";
 import {
   getAllPaths,
@@ -13,12 +13,12 @@ const notesDir = join(process.cwd(), "", "modules", "notes", "documentation");
 export default function NotePage({ noteData, bgJsons }: any) {
   return (
     <>
-      <Layout bgJsons={bgJsons} extra={<ProcessNoteData noteData={noteData} />}>
+      <GenericLayout bgJsons={bgJsons} extra={<ProcessNoteData noteData={noteData} />}>
         <Head>
           <title>{noteData.title}</title>
         </Head>
         <div dangerouslySetInnerHTML={{ __html: noteData.contentHtml }} />
-      </Layout>
+      </GenericLayout>
     </>
   );
 }
