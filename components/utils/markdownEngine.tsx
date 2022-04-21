@@ -33,7 +33,7 @@ export function getAllPaths(directory: string): { params: { id: string[] } }[] {
       .replaceAll("\\", "/")
       .replace(/\.md$/, "")
       .toLowerCase()
-      .split(".");
+      .split("/");
 
     const locale = retVal[retVal.length - 1];
 

@@ -10,7 +10,10 @@ const wikiDir = join(process.cwd(), "", "modules", "wiki", "documentation");
 export default function WikiPage({ wikiData }: any) {
   return (
     <GenericLayout>
-      <div dangerouslySetInnerHTML={{ __html: wikiData.contentHtml }} />
+      <div
+        className="align-left"
+        dangerouslySetInnerHTML={{ __html: wikiData.contentHtml }}
+      />
     </GenericLayout>
   );
 }
