@@ -1,54 +1,29 @@
-import generic from "../styles/generic.module.scss";
+import GenericFooter from "./footer/GenericFooter";
+import GenericHeader from "./header/GenericHeader";
 
-export default function GenericLayout({ bgJsons, children, extra = null }: any) {
-  var bg = bgJsons[Math.floor(Math.random() * bgJsons.length)];
-  var bgJ = JSON.parse(bg);
-
+/**
+ * Streamlined layout shared by all webpages, providing default stylization, headers, footers, etc.
+ * @param param0 Parameters for the generic layout.
+ */
+export default function GenericLayout({
+  children,
+  // path,
+  // title,
+  home = false,
+}: any) {
   return (
-    <>
-      <div
-        style={{
-          backgroundImage: `url(${bgJ.src})`,
-          backgroundPosition: "center, center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "black",
-          width: "100%",
-          height: "100%",
-          left: "0",
-          top: "0",
-          position: "fixed",
-          zIndex: -1,
-        }}
-        suppressHydrationWarning={true}
-      />
-      {extra}
-      <div
-        className={generic.floatingContainer}
-        style={{
-          backgroundColor: "rgb(0, 0, 0, 0.9)",
-          borderRadius: "6px",
-        }}
-      >
-        <h3 className={"ignore-headers"} style={{ margin: "0 0 0 0" }}>
-          Artwork Info.
-        </h3>
-        <p style={{ margin: "0 0 0 0" }}>
-          <strong>Artist:</strong> <a
-            href={bgJ.pixiv}
-            suppressHydrationWarning={true}
-          >{bgJ.author}</a>
-        </p>
-      </div>
-      <div
-        className={generic.container}
-        style={{
-          backgroundColor: "rgb(0, 0, 0, 0.9)",
-          borderRadius: "6px",
-        }}
-      >
-        {children}
-      </div>
-    </>
+    <div>
+      {/* Background */}
+      <div className="background" />
+      <div className="background-cover" />
+
+      {/* Header */}
+      <GenericHeader home={home} /*path={path} title={title}*/ />
+
+      {/* Body Content */}
+      <div>{children}</div>
+
+      <GenericFooter />
+    </div>
   );
 }

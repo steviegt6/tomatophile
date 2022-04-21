@@ -15,12 +15,12 @@
     "rehype-document": "^6.0.1",
     "rehype-format": "^4.0.1",
     "rehype-highlight": "^5.0.2",
-    "rehype-stringify": "^9.0.2",
+    "rehype-stringify": "^9.0.3",
     "remark-code-frontmatter": "^1.0.0",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "sass": "^1.47.0",
-    "unified": "^10.1.1"
+    "unified": "^10.1.2"
   },
   "devDependencies": {
     "@types/node": "17.0.8",

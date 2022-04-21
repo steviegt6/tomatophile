@@ -1,0 +1,164 @@
+@import "global.mixins.scss";
+@import "global.colors.scss";
+@import "global.fonts.scss";
+@import "global.sizes.scss";
+
+head,
+body {
+  font-family: $font-quicksand;
+  font-size: 18px;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+
+  margin-top: 104px;
+  margin-bottom: 86px;
+
+  margin-right: 36px;
+  margin-left: 36px;
+
+  text-align: center;
+
+  ::selection {
+    background-color: $highlighted-background-color;
+    color: $highlighted-text-color;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+
+  background-image: url("https://konachan.net/image/e63430a6bf8c888c4dc9457f6de25f1d/Konachan.com%20-%20333345%20bicycle%20building%20original%20rain%20sakeharasu%20scenic%20umbrella%20water.jpg");
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-cover {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+
+  background-color: $background-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a:not(.ignore-links) {
+  text-decoration: none;
+  position: relative;
+  color: $link-idle-blue;
+
+  text-shadow: 0 0 12px $link-idle-blue;
+}
+
+a:not(.ignore-links)::after,
+a:not(.ignore-links)::before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 0.075em;
+
+  transition: width 0.3s;
+}
+
+a:not(.ignore-links)::before {
+  background-color: currentColor;
+  background: transparent;
+}
+
+a:not(.ignore-links)::after {
+  width: 0%;
+  background: $link-idle-blue;
+}
+
+// Apply transitional animations.
+a:not(.ignore-links):hover {
+  text-decoration: none;
+
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from($link-idle-blue),
+    color-stop($link-idle-blue),
+    color-stop($link-gradient-blue),
+    color-stop($link-idle-blue),
+    to($link-idle-blue)
+  );
+
+  background: linear-gradient(
+    270deg,
+    $link-idle-blue,
+    $link-idle-blue,
+    $link-gradient-blue,
+    $link-idle-blue,
+    $link-idle-blue
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-size: 400% 400%;
+
+  animation: bg-grad-anim 3s ease infinite;
+}
+
+a:not(.ignore-links):hover::after {
+  width: 100%;
+}
+
+.flexible {
+  @include flex-display;
+}
+
+.header {
+  @include top-sticked-element;
+  @include flex-display;
+
+  justify-content: space-between;
+
+  background-color: $hoisted-color;
+  padding: $hoisted-padding;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  @include bottom-sticked-element;
+  @include flex-display;
+
+  background-color: $hoisted-color;
+  padding: $hoisted-padding;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bg-grad-anim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}

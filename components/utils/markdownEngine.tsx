@@ -1,5 +1,4 @@
 import { readdirSync, readFileSync, statSync } from "fs";
-import { unified } from "unified";
 import matter from "gray-matter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -9,6 +8,7 @@ import rehypeFormat from "rehype-format";
 import rehypeStringify from "rehype-stringify";
 import rehypeHighlight from "rehype-highlight";
 import { join } from "path";
+import { unified } from "unified";
 
 export function collectFiles(directory: string, files: string[]): string[] {
   const dirContents = readdirSync(directory);
@@ -33,7 +33,7 @@ export function getAllPaths(directory: string): { params: { id: string[] } }[] {
       .replaceAll("\\", "/")
       .replace(/\.md$/, "")
       .toLowerCase()
-      .split("/");
+      .split(".");
 
     const locale = retVal[retVal.length - 1];
 

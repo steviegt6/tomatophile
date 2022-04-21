@@ -1,0 +1,9 @@
+.pfp {
+  border-radius: 50%;
+  transition: box-shadow 0.3s;
+  margin-right: 10px;
+}
+
+.pfp:hover {
+  box-shadow: 0 0 16px 4px darkred;
+}

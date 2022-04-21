@@ -1,19 +1,48 @@
-/* Link styling used in global.scss 
-   Any element with the "ignore-links"
-   class is exempt from this styling.
-*/
+$link-idle-blue: pink;
+$link-gradient-blue: salmon;
 
-@import "../colors.scss";
+.pfp {
+  border-radius: 50%;
+  margin-right: 10px;
 
-// Basic styling.
-a:not(.ignore-links) {
+  cursor: pointer;
+
+  transition: box-shadow 0.3s;
+}
+
+.pfp:hover {
+  box-shadow: 0 0 16px 4px darkred;
+}
+
+.text {
+  align-self: center;
+  margin: 0;
+}
+
+.headerTitle {
+  color: gray;
+  transition: color 1s ease;
+}
+
+.headerTitle:hover {
+  color: white;
+}
+
+/*.centerText {
+  justify-self: center;
+  align-self: center;
+}*/
+
+.tomat {
   text-decoration: none;
   position: relative;
   color: $link-idle-blue;
+
+  text-shadow: 0 0 12px $link-idle-blue;
 }
 
-a:not(.ignore-links)::after,
-a:not(.ignore-links)::before {
+.tomat::after,
+.tomat::before {
   content: "";
   display: block;
   position: absolute;
@@ -26,18 +55,18 @@ a:not(.ignore-links)::before {
   transition: width 0.3s;
 }
 
-a:not(.ignore-links)::before {
+.tomat::before {
   background-color: currentColor;
   background: transparent;
 }
 
-a:not(.ignore-links)::after {
+.tomat::after {
   width: 0%;
   background: $link-idle-blue;
 }
 
 // Apply transitional animations.
-a:not(.ignore-links):hover {
+.tomat:hover {
   text-decoration: none;
 
   background: -webkit-gradient(
@@ -69,7 +98,7 @@ a:not(.ignore-links):hover {
   animation: bg-grad-anim 3s ease infinite;
 }
 
-a:not(.ignore-links):hover::after {
+.tomat:hover::after {
   width: 100%;
 }
 
@@ -82,20 +111,5 @@ a:not(.ignore-links):hover::after {
   }
   to {
     background-position: 0 50%;
-  }
-}
-
-@keyframes line-hover {
-  0% {
-    width: 0%;
-    top: 100%;
-  }
-  50% {
-    width: 100%;
-    top: 100%;
-  }
-  100% {
-    width: 100%;
-    top: 0%;
   }
 }
