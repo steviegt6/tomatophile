@@ -7,6 +7,10 @@ export default function Index() {
     <GenericLayout home={true} /*title="index"*/>
       <ProfileHeader />
       <Introduction />
+      <br />
+      <Commissions />
+      <br />
+      <Contact />
     </GenericLayout>
   );
 }
@@ -32,6 +36,43 @@ function Introduction() {
         such things for both players and developers.
       </p>
       <p>I prefer working backend, I'm not a frontend guy.</p>
+    </div>
+  );
+}
+
+function Commissions() {
+  return (
+    <div>
+      <h2>Commissions and Support</h2>
+      <p>Programming is a hobby of mine. I don't have a programming job.</p>
+      <p>Making money off of my hobby would be pretty neat!</p>
+      <br />
+      <p>
+        If you're just interested in donating, you can do so through my{" "}
+        <a href="https://patreon.com/tomatophile">Patreon</a> and{" "}
+        <a href="https://ko-fi.com/tomatophile">Ko-Fi</a>.
+      </p>
+      <p>
+        If you're looking to pay me to make something for you, I offer
+        commissions at roughly 15 USD/hour. Contact me directly to inquire
+        further.
+      </p>
+    </div>
+  );
+}
+
+function Contact() {
+  return (
+    <div>
+      <h2>Contact Information</h2>
+      <p>
+        If possible, I would prefer to communicate directly though a chat
+        service such as Discord.
+      </p>
+      <br />
+      <p>Discord: <code>Tomat#0001</code></p>
+      <p><a href="https://github.com/Steviegt6">GitHub:</a> <code>Steviegt6</code></p>
+      <p>Email: <code>xxlennygamerxx@gmail.com</code> (not a joke)</p>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import rehypeStringify from "rehype-stringify";
 import rehypeHighlight from "rehype-highlight";
 import { join } from "path";
 import { unified } from "unified";
+import remarkGfm from "remark-gfm";
 
 export function collectFiles(directory: string, files: string[]): string[] {
   const dirContents = readdirSync(directory);
@@ -63,6 +64,7 @@ export async function getMarkdownData(directory: string, id: string[]) {
   const matterResult = matter(fileContents);
   const processedContent = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype)
     .use(remarkCodeFrontmatter)
     .use(rehypeDocument)

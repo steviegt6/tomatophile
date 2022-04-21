@@ -17,6 +17,7 @@
     "rehype-highlight": "^5.0.2",
     "rehype-stringify": "^9.0.3",
     "remark-code-frontmatter": "^1.0.0",
+    "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
     "sass": "^1.47.0",
