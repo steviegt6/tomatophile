@@ -10,7 +10,7 @@ export default function ProfileReturnComponent({ home /*path, title*/ }: any) {
         <Link href="/">
           <img src="/pfp.png" height={48} width={48} className={styles.pfp} />
         </Link>
-        <p className={styles.text}>Hey there, I'm&nbsp;</p>
+        <p className={styles.text}>Hey there, I&apos;m&nbsp;</p>
         <GetTomatLink home={home} />
       </div>
       <div className="flexible">
