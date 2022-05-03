@@ -1,5 +1,20 @@
-import GenericFooter from "./footer/GenericFooter";
-import GenericHeader from "./header/GenericHeader";
+import { AppShell, MantineProvider } from "@mantine/core";
+import { FooterSocial } from "./mantine/FooterSocial";
+import { HeaderMenu } from "./mantine/HeaderMenu";
+
+const links = [
+  { link: "/", label: "Home" },
+  { link: "/projects", label: "Projects" },
+  { link: "/about", label: "About" },
+  {
+    link: "/wiki/en/main_page",
+    label: "Wiki",
+    links: [
+      { link: "/wiki/en/mc", label: "Minecraft" },
+      { link: "/wiki/en/terraria", label: "Terraria" },
+    ],
+  },
+];
 
 /**
  * Streamlined layout shared by all webpages, providing default stylization, headers, footers, etc.
@@ -12,18 +27,19 @@ export default function GenericLayout({
   home = false,
 }: any) {
   return (
-    <div>
-      {/* Background */}
-      <div className="background" />
-      <div className="background-cover" />
+    <MantineProvider theme={{ colorScheme: "dark" }}>
+      <AppShell
+        fixed
+        header={<HeaderMenu links={links} />}
+        footer={<FooterSocial />}
+      >
+        {/* Background */}
+        <div className="background" />
+        <div className="background-cover" />
 
-      {/* Header */}
-      <GenericHeader home={home} /*path={path} title={title}*/ />
-
-      {/* Body Content */}
-      <div>{children}</div>
-
-      <GenericFooter />
-    </div>
+        {/* Body Content */}
+        <div>{children}</div>
+      </AppShell>
+    </MantineProvider>
   );
 }

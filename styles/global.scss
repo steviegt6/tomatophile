@@ -12,9 +12,6 @@ body {
   color: $text-color;
   background-color: $background-color;
 
-  margin-top: 104px;
-  margin-bottom: 86px;
-
   margin-right: 36px;
   margin-left: 36px;
 
@@ -162,6 +159,12 @@ a:not(.ignore-links):hover::after {
   background-color: $hoisted-color;
   padding: $hoisted-padding;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mantine-Header-root,
+.mantine-Menu-body,
+.mantine-Footer-root {
+  background-color: #040404bf;
 }
 
 @keyframes bg-grad-anim {

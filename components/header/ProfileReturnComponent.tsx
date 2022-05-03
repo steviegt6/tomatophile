@@ -13,12 +13,6 @@ export default function ProfileReturnComponent({ home /*path, title*/ }: any) {
         <p className={styles.text}>Hey there, I&apos;m&nbsp;</p>
         <GetTomatLink home={home} />
       </div>
-      <div className="flexible">
-        <GetLinks />
-      </div>
-      {/*<div className={getClasses("flexible", styles.headerTitle)}>
-        <h2 className={styles.text}>{title}</h2>
-      </div>*/}
     </>
   );
 }
@@ -35,19 +29,5 @@ function GetTomatLink({ home }: any) {
     <p className={getClasses(styles.text)}>
       <Link href="/">Tomat</Link>
     </p>
-  );
-}
-
-function GetLinks() {
-  return (
-    <>
-      <Link href="/"><a className={styles.text}>Home</a></Link>
-      <GrayedPipe className={styles.text} />
-      <Link href="/projects"><a className={styles.text}>Projects</a></Link>
-      <GrayedPipe className={styles.text} />
-      <Link href="/about"><a className={styles.text}>About</a></Link>
-      <GrayedPipe className={styles.text} />
-      <Link href="/wiki/en/main_page"><a className={styles.text}>Wiki</a></Link>
-    </>
   );
 }
