@@ -46,7 +46,7 @@ export function FooterSocial() {
 
   return (
     <div className={classes.footer}>
-      <Footer>
+      <Footer height={80}>
         <Container className={classes.inner}>
           <GenericFooter />
           <Group spacing={0} className={classes.links} position="right" noWrap>
