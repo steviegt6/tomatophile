@@ -76,65 +76,8 @@ a:not(.ignore-links) {
   text-shadow: 0 0 12px $link-idle-blue;
 }
 
-a:not(.ignore-links)::after,
-a:not(.ignore-links)::before {
-  content: "";
-  display: block;
-  position: absolute;
-
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 0.075em;
-
-  transition: width 0.3s;
-}
-
-a:not(.ignore-links)::before {
-  background-color: currentColor;
-  background: transparent;
-}
-
-a:not(.ignore-links)::after {
-  width: 0%;
-  background: $link-idle-blue;
-}
-
-// Apply transitional animations.
 a:not(.ignore-links):hover {
-  text-decoration: none;
-
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from($link-idle-blue),
-    color-stop($link-idle-blue),
-    color-stop($link-gradient-blue),
-    color-stop($link-idle-blue),
-    to($link-idle-blue)
-  );
-
-  background: linear-gradient(
-    270deg,
-    $link-idle-blue,
-    $link-idle-blue,
-    $link-gradient-blue,
-    $link-idle-blue,
-    $link-idle-blue
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  background-size: 400% 400%;
-
-  animation: bg-grad-anim 3s ease infinite;
-}
-
-a:not(.ignore-links):hover::after {
-  width: 100%;
+  text-decoration: underline;
 }
 
 .flexible {
