@@ -1,3 +1,2 @@
-#rm -rf ./modules/notes
-#git clone https://github.com/uranometrical/notes ./modules/notes
-#git clone https://github.com/rejuvena/tml-wiki ./modules/tml-wiki
+rm -rf ./modules/wiki
+git clone https://github.com/Steviegt6/wiki ./modules/wiki
