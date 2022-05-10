@@ -60,7 +60,7 @@ export function FooterSocial() {
                 <BrandYoutube size={18} />
               </ActionIcon>
             </a>
-            <a href="https://discord.gg/thorium">
+            <a href="https://discord.gg/tomat">
               <ActionIcon size="lg">
                 <BrandDiscord size={18} />
               </ActionIcon>
