@@ -5,18 +5,16 @@ import {
   Menu,
   Group,
   Center,
-  Burger,
+  //Burger,
   Container,
 } from "@mantine/core";
 import { useBooleanToggle } from "@mantine/hooks";
 import { ChevronDown } from "tabler-icons-react";
-import ProfileReturnComponent from "../header/ProfileReturnComponent";
-import Link from "next/link";
-// import { MantineLogo } from '../../shared/MantineLogo';
+import TomatLogo from "../shared/TomatLogo";
 
 const useStyles = createStyles((theme) => ({
   inner: {
-    height: 56,
+    height: 80,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -48,7 +46,10 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
 
     "&:hover": {
-      backgroundColor: "#040404bf",
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
     },
   },
 
@@ -57,11 +58,11 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderSearchProps {
+export interface HeaderSearchProps {
   links: {
     link: string;
     label: string;
-    links: { link: string; label: string }[] | undefined;
+    links: { link: string; label: string }[];
   }[];
 }
 
@@ -71,11 +72,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Link key={item.label} href={item.link}>
-        <Menu.Item key={item.link}>
-          <a>{item.label}</a>
-        </Menu.Item>
-      </Link>
+      <Menu.Item key={item.link}>{item.label}</Menu.Item>
     ));
 
     if (menuItems) {
@@ -88,7 +85,11 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
           placement="end"
           gutter={1}
           control={
-            <a href={link.link} className={classes.link}>
+            <a
+              href={link.link}
+              className={classes.link}
+              onClick={(event) => event.preventDefault()}
+            >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
                 <ChevronDown size={12} />
@@ -102,26 +103,31 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
     }
 
     return (
-      <a key={link.label} href={link.link} className={classes.link}>
+      <a
+        key={link.label}
+        href={link.link}
+        className={classes.link}
+        onClick={(event) => event.preventDefault()}
+      >
         {link.label}
       </a>
     );
   });
 
   return (
-    <Header height={56} mb={120}>
+    <Header height={80} mb={120}>
       <Container>
         <div className={classes.inner}>
-          <ProfileReturnComponent />
+          <TomatLogo width={48} height={48} />
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
-          <Burger
+          {/*<Burger
             opened={opened}
             onClick={() => toggleOpened()}
             className={classes.burger}
             size="sm"
-          />
+  />*/}
         </div>
       </Container>
     </Header>

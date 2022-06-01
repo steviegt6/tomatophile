@@ -9,17 +9,17 @@ import {
 import {
   BrandTwitter,
   BrandYoutube,
-  BrandInstagram,
   BrandDiscord,
+  BrandGithub,
 } from "tabler-icons-react";
-import GenericFooter from "../footer/GenericFooter";
+import MadeWithLove from "../shared/MadeWithLove";
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
+    /*marginTop: 120,
     borderTop: `1px solid ${
       theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[2]
-    }`,
+    }`,*/
   },
 
   inner: {
@@ -48,7 +48,7 @@ export function FooterSocial() {
     <div className={classes.footer}>
       <Footer height={80}>
         <Container className={classes.inner}>
-          <GenericFooter />
+          <MadeWithLove />
           <Group spacing={0} className={classes.links} position="right" noWrap>
             <a href="https://twitter.com/TheTomatophile">
               <ActionIcon size="lg">
@@ -63,6 +63,11 @@ export function FooterSocial() {
             <a href="https://discord.gg/tomat">
               <ActionIcon size="lg">
                 <BrandDiscord size={18} />
+              </ActionIcon>
+            </a>
+            <a href="https://github.com/Steviegt6">
+              <ActionIcon size="lg">
+                <BrandGithub size={18} />
               </ActionIcon>
             </a>
           </Group>
