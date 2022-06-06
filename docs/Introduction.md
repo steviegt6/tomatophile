@@ -4,7 +4,7 @@ description: Welcome.
 
 # Introduction
 
-Welcome to my personal wiki, anyone is free to edit [here](https://github.com/Steviegt6/tomatophile).
+Welcome to my `Tomatophile`, personal wiki - anyone is free to edit [here](https://github.com/Steviegt6/tomatophile).
 
 {% hint style="warning" %}
 This wiki is a work-in-progress and ever-growing. Information is subject to change.
