@@ -13,6 +13,8 @@ const extensions = {
   false: ".png",
 };
 
+let cachedUrl: string | undefined = undefined;
+
 export default function TomatLogo({ width, height }) {
   return (
     <div className="center-flexible">
@@ -27,7 +29,9 @@ export default function TomatLogo({ width, height }) {
 }
 
 function TomatPfp({ width, height }) {
-  const [image, setImage] = useState<string | StaticImageData>(pfp);
+  const [image, setImage] = useState<string | StaticImageData>(
+    cachedUrl ? cachedUrl : pfp
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +39,7 @@ function TomatPfp({ width, height }) {
       const json = (await resp.json()) as LanyardResponse;
       const avatar = json.data.discord_user.avatar;
       const ext = extensions[String(avatar.startsWith("a_"))];
-      setImage(discordEndpoint + avatar + ext);
+      setImage((cachedUrl = discordEndpoint + avatar + ext));
     };
 
     fetchData();
@@ -55,10 +59,11 @@ function TomatPfp({ width, height }) {
 function Greeting() {
   return (
     <p className={styles.greetingText}>
-      Hi there,{" "}
+      Hey,{" "}
       <Link href="/">
-        <a className={styles.tomatLink}>I'm Tomat.</a>
+        <a>what's up</a>
       </Link>
+      ?
     </p>
   );
 }
