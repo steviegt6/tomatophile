@@ -1,0 +1,45 @@
+---
+// Provides a good base for handling pages that fade in, with an allowance for fade separation.
+
+export interface Props {
+    phases: number;
+    optIn: boolean;
+}
+
+console.log("bruh");
+
+const { phases, optIn } = Astro.props;
+---
+
+<div id="phases" class={phases} />
+<div id="optIn" class={optIn ? "1" : "0"} />
+
+<slot />
+
+<script>
+    var phases = parseInt(document.getElementById("phases").className);
+    var optIn = parseInt(document.getElementById("optIn").className);
+
+    var elements = [];
+
+    for (var phase = 0; phase < phases; phase++) {
+        elements[phase] = document.getElementsByClassName('phase-' + phase);
+
+        if (!optIn) {
+            for (var i = 0; i < elements[phase].length; i++) {
+                elements[phase][i].style.opacity = 0;
+            }
+        }
+    }
+
+    console.log(elements);
+
+    for (var phase = 0; phase < phases; phase++) {
+        setTimeout((elms, phs) => {
+            for (var i = 0; i < elms[phs].length; i++) {
+                elms[phs][i].style.transition = "opacity 1s linear";
+                elms[phs][i].style.opacity = 1;
+            }
+        }, 1000 * (phase + 1), elements, phase);
+    }
+</script>

@@ -1,30 +1,19 @@
 ---
-import Meta from "../components/meta/Meta.astro";
+import FadeInContainer from "../components/FadeInContainer.astro";
 import AstroDiscordPfp from "../components/shared/AstroDiscordPfp.astro";
+import MetaLayout from "../layouts/MetaLayout.astro";
 
 let title = 'Tomat';
 let description = 'tomato';
 ---
 
-<html lang="en">
-
-<head>
-	<Meta title={title} description={description} />
-</head>
-
-<body>
-	<div class="grid place-items-center h-screen">
-		<h1>Test</h1>
-		<div id="pfp" class="opacity-0">
-			<AstroDiscordPfp width={128} height={128} />
+<MetaLayout title={title} description={description}>
+	<FadeInContainer phases={2} optIn={false}>
+		<div class="grid place-items-center h-screen">
+			<h1 class="phase-1">Test</h1>
+			<div id="pfp" class="phase-0">
+				<AstroDiscordPfp width={128} height={128} />
+			</div>
 		</div>
-	</div>
-</body>
-
-<script>
-	const pfp = document.getElementById('pfp');
-	pfp.style.transition = "opacity 3s linear";
-	pfp.style.opacity = 1;
-</script>
-
-</html>
+	</FadeInContainer>
+</MetaLayout>

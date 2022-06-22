@@ -1,0 +1,24 @@
+---
+// Provides an easy layout for handling meta information.
+
+import Meta from "../components/meta/Meta.astro";
+
+export interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+
+<head>
+    <Meta title={title} description={description} />
+</head>
+
+<body>
+    <slot />
+</body>
+
+</html>

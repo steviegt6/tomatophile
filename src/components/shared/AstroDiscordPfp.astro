@@ -1,4 +1,5 @@
 ---
+import { getDiscordProfileUrl } from "../../../lib/discordProfile";
 import DiscordPfp from "./DiscordPfp";
 
 export interface Props {
@@ -6,6 +7,12 @@ export interface Props {
     height: number;
 }
 
+const discordId = "269903979582849024";
 const { width, height } = Astro.props;
+
+async function getPfpUrl(_:Request) {
+    return await getDiscordProfileUrl(discordId);
+}
+const overrideUrl = await getPfpUrl(Astro.request);
 ---
-<DiscordPfp client:load width={width} height={height} />
+<DiscordPfp client:load width={width} height={height} overrideUrl={overrideUrl} />
