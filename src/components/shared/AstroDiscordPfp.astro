@@ -1,0 +1,11 @@
+---
+import DiscordPfp from "./DiscordPfp";
+
+export interface Props {
+    width: number;
+    height: number;
+}
+
+const { width, height } = Astro.props;
+---
+<DiscordPfp client:load width={width} height={height} />

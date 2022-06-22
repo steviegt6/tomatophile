@@ -1,4 +1,4 @@
-/* These are not complete types, just raw data required to get what I want. */
+/* Incomplete lanyard type definitions, not intended to be complete. */
 
 export type LanyardResponse = {
     data: LanyardData;
